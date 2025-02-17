@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS для стилей -->
+</head>
+<body>
+    <header>
+        <h1>Привет, я Щербина Артем!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Я студент МПУ, обучаюсь по программе специалитета на направлении ИБАС.</p>
+            <blockquote>
+                "Воду пить нельзя, в ней рыбы плавают." — <cite>Конфуций</cite>
+            </blockquote>
+            <img src="your-photo.jpg" alt="Мое фото" width="300">
+        </section>
+
+        <section id="skills">
+            <h2>Навыки</h2>
+            <h3>Языки программирования:</h3>
+            <ul>
+		<li>C++</li>
+                <li>Python</li>
+            </ul>
+            <h3>Инструменты:</h3>
+            <ol>
+                <li>Git</li>
+                <li>VS Code</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы, не стесняйтесь связаться со мной!</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Следите за мной в социальных сетях: 
+            <a href="https://vk.com/feed" target="_blank">ВКонтакте</a>.
+        </p>
+    </footer>
+</body>
+</html>
