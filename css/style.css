@@ -1,0 +1,67 @@
+/* Установка базовых стилей */
+:root {
+    --main-color: #3498db; /* Основной цвет */
+    --secondary-color: #2ecc71; /* Вторичный цвет */
+    --text-color: #333; /* Цвет текста */
+    --link-color: #3498db; /* Цвет ссылок */
+    --background-color: #f4f4f4; /* Цвет фона */
+    --font-family: 'Roboto', sans-serif; /* Подключенный шрифт */
+    --font-size-base: 1.6rem; /* Базовый размер шрифта */
+    --line-height: 1.5; /* Межстрочный интервал */
+}
+
+/* Установка размера шрифта для корневого элемента */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Стили для body */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Жирный текст для заголовков */
+    line-height: var(--line-height);
+}
+
+/* Стили для параграфов */
+p {
+    margin: 0 0 1.5rem; /* Отступы для параграфов */
+}
+
+/* Стили для ссылок */
+a {
+    color: var(--link-color);
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Стили для ссылок при наведении */
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для кнопок */
+.button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Стили для границ элементов */
+.box {
+    border: 1px solid var(--main-color);
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px;
+    background-color: white; /* Фон для блока */
+}
