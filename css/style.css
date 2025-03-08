@@ -1,103 +1,174 @@
-/* Установка базовых стилей */
+/* Переменные */
 :root {
-    --main-color: #3498db; /* Основной цвет */
-    --secondary-color: #2ecc71; /* Вторичный цвет */
-    --text-color: #333; /* Цвет текста */
-    --link-color: #3498db; /* Цвет ссылок */
-    --background-color: #f4f4f4; /* Цвет фона */
-    --font-family: 'Roboto', sans-serif; /* Подключенный шрифт */
-    --font-size-base: 1.6rem; /* Базовый размер шрифта */
-    --line-height: 1.5; /* Межстрочный интервал */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --font-size-base: 1.6rem;
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-family-secondary: 'Open Sans', sans-serif;
 }
 
-/* Установка размера шрифта для корневого элемента */
+/* Базовые стили */
 html {
     font-size: 62.5%; /* 1rem = 10px */
 }
 
-/* Стили для body */
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family-primary);
     font-size: var(--font-size-base);
-    line-height: var(--line-height);
+    line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
 }
 
-/* Стили для заголовков */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700; /* Жирный текст для заголовков */
-    line-height: var(--line-height);
-}
-
-/* Стили для параграфов */
-p {
-    margin: 0 0 1.5rem; /* Отступы для параграфов */
-}
-
-/* Стили для ссылок */
-a {
-    color: var(--link-color);
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-/* Стили для ссылок при наведении */
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-/* Стили для кнопок */
-.button {
-    background-color: var(--main-color);
-    color: white;
-    border: none;
-    border-radius: 5px; /* Скругление углов */
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* Стили для границ элементов */
-.box {
-    border: 1px solid var(--main-color);
-    border-radius: 10px; /* Скругление углов */
-    padding: 20px;
-    background-color: white; /* Фон для блока */
-}
-header, footer, section {
-    max-width: 1200px; /* Ограничиваем максимальную ширину */
-    margin: 0 auto; /* Центрируем контент */
-    padding: 20px; /* Добавляем отступы */
-}
-.header {
-    position: relative;
-    z-index: 10; /* Убедитесь, что хедер выше других элементов */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5; /* Элемент, который будет ниже */
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px; /* Отступы между изображениями */
-}
-
-figure {
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
     margin: 0;
-    background-color: #f0f0f0; /* Цвет фона для фигур */
-    border-radius: 8px; /* Скругление углов */
-    overflow: hidden; /* Обрезаем содержимое */
+}
+
+p {
+    margin: 0 0 1.5rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 img {
-    width: 100%; /* Ширина изображения */
-    height: auto; /* Высота автоматически */
-    object-fit: cover; /* Обеспечиваем корректное отображение изображения */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--secondary-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Обертка для контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Стили для header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Стили для main */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Стили для формы */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Стили для footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* Стили для галереи */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.gallery-container figure {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+}
+
+.gallery-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-container figcaption {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
 }
