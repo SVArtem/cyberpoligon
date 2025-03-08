@@ -83,3 +83,21 @@ header, footer, section {
     height: 100%;
     z-index: 5; /* Элемент, который будет ниже */
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px; /* Отступы между изображениями */
+}
+
+figure {
+    margin: 0;
+    background-color: #f0f0f0; /* Цвет фона для фигур */
+    border-radius: 8px; /* Скругление углов */
+    overflow: hidden; /* Обрезаем содержимое */
+}
+
+img {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Высота автоматически */
+    object-fit: cover; /* Обеспечиваем корректное отображение изображения */
+}
