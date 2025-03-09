@@ -171,3 +171,8 @@ footer {
     font-size: 1.4rem;
     color: var(--text-color);
 }
+img {
+    width: 300px; 
+    height: auto; 
+    border-radius: 8px;
+}
