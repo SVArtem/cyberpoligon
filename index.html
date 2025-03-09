@@ -14,57 +14,59 @@
         <nav>
             <ul>
                 <li><a href="#about">Обо мне</a></li>
-		<li><a href="gallery.html">Галерея</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p>Я студент МПУ, обучаюсь по программе специалитета на направлении ИБАС.</p>
-            <blockquote>
-                "Воду пить нельзя, в ней рыбы плавают." — <cite>Конфуций </cite>
-            </blockquote>
-        </section>
+    <div class="container"> 
+        <main>
+            <section id="about">
+                <h2>Обо мне</h2>
+                <p>Я студент МПУ, обучаюсь по программе специалитета на направлении ИБАС.</p>
+                <blockquote>
+                    "Воду пить нельзя, в ней рыбы плавают." — <cite>Конфуций </cite>
+                </blockquote>
+            </section>
 
-        <section id="skills">
-            <h2>Навыки</h2>
-            <h3>Языки программирования:</h3>
-            <ul>
-		<li>C++</li>
-                <li>Python</li>
-            </ul>
-            <h3>Инструменты:</h3>
-            <ol>
-                <li>Git</li>
-                <li>VS Code</li>
-            </ol>
-        </section>
+            <section id="skills">
+                <h2>Навыки</h2>
+                <h3>Языки программирования:</h3>
+                <ul>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+                <h3>Инструменты:</h3>
+                <ol>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                </ol>
+            </section>
 
-        <section id="contact">
-            <h2>Контакты</h2>
-            <p>Если у вас есть вопросы, не стесняйтесь связаться со мной!</p>
-            <form action="submit_form.php" method="post">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <br>
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
-    </main>
+            <section id="contact">
+                <h2>Контакты</h2>
+                <p>Если у вас есть вопросы, не стесняйтесь связаться со мной!</p>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <br>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+    </div> 
 
     <footer>
         <hr>
         <p>Следите за мной в социальных сетях: 
             <a href="https://vk.com/feed" target="_blank">Vk</a>.
-	    <a href="https://github.com/SVArtem">GitHub</a>.
+            <a href="https://github.com/SVArtem">GitHub</a>.
         </p>
     </footer>
 </body>
